@@ -1,0 +1,59 @@
+{
+  "name": "@cap-view/test",
+  "version": "2.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20.19.0"
+  },
+  "scripts": {
+    "start": "vite",
+    "typescript-check": "tsc --noEmit",
+    "lint": "eslint --config config/eslint.config.js src",
+    "clean": "rimraf ./build/*",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "compression": "^1.7.4",
+    "core-js": "^3.45.1",
+    "cors": "^2.8.5",
+    "crypto-browserify": "^3.12.1",
+    "express": "^5.1.0",
+    "helmet": "^8.1.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.30.1",
+    "@types/compression": "^1.8.1",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.3",
+    "@types/node": "^24.3.0",
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
+    "@typescript-eslint/eslint-plugin": "^8.41.0",
+    "@typescript-eslint/parser": "^8.41.0",
+    "@vitejs/plugin-react": "^5.0.2",
+    "copyfiles": "^2.4.1",
+    "cross-env": "^10.0.0",
+    "esbuild": "^0.25.9",
+    "esbuild-node-externals": "^1.18.0",
+    "eslint": "^9.34.0",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.20",
+    "globals": "^16.3.0",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^6.0.1",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.20.5",
+    "typescript": "^5.9.2",
+    "typescript-eslint": "^8.35.1",
+    "vite": "^7.1.4",
+    "vite-plugin-dts": "^4.5.4",
+    "vite-plugin-lib-inject-css": "^2.2.2",
+    "vite-plugin-node-polyfills": "^0.24.0",
+    "vite-tsconfig-paths": "^5.1.4"
+  }
+}

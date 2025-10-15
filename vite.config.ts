@@ -1,12 +1,16 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import tsconfigPaths from 'vite-tsconfig-paths';
+// import babel from 'vite-plugin-babel';
 // import { resolve } from 'path';
 
 const isProduction = process.env.NODE_ENV === "production";
 
 export default defineConfig({
-  plugins: [react(), tsconfigPaths()],
+  plugins: [
+    react(), 
+    tsconfigPaths(),
+  ],
   resolve: {
     alias: {
       crypto: "crypto-browserify",

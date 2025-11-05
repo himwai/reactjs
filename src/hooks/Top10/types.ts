@@ -3,16 +3,18 @@ export const CalculateFunction = {
   MAX: "max",
   MIN: "min",
   AVG: "avg",
+  COUNT: "count",
 } as const;
 
-export type CalculateFunction = typeof CalculateFunction[keyof typeof CalculateFunction];
+export type CalculateFunction =
+  (typeof CalculateFunction)[keyof typeof CalculateFunction];
 
 export const SortOrder = {
   ASC: "asc",
   DESC: "desc",
 } as const;
 
-export type SortOrder = typeof SortOrder[keyof typeof SortOrder];
+export type SortOrder = (typeof SortOrder)[keyof typeof SortOrder];
 
 // Core Item Types
 export interface Top10Item {
@@ -26,6 +28,7 @@ export interface DataSourceItem {
   id: string;
   name: string;
   value: number;
+  [key: string]: any;
 }
 
 // Metadata Types
@@ -37,10 +40,35 @@ export interface DataSourceMetaData {
   thousandSeparator?: string;
   prefix?: string;
   suffix?: string;
+  buttonUri?: string;
   buttonText?: string;
   buttonIcon?: string;
   nameLabel?: string;
   valueLabel?: string;
+  // Color customization for champion (1st place)
+  championIndexColor?: string;
+  championIndexBackgroundColor?: string;
+  championValueColor?: string;
+  championValueBackgroundColor?: string;
+  championBackgroundColor?: string;
+  // Color customization for runner-up (2nd place)
+  runnerUpIndexColor?: string;
+  runnerUpIndexBackgroundColor?: string;
+  runnerUpValueColor?: string;
+  runnerUpValueBackgroundColor?: string;
+  runnerUpBackgroundColor?: string;
+  // Color customization for third place
+  thirdPlaceIndexColor?: string;
+  thirdPlaceIndexBackgroundColor?: string;
+  thirdPlaceValueColor?: string;
+  thirdPlaceValueBackgroundColor?: string;
+  thirdPlaceBackgroundColor?: string;
+  // Color customization for other places (4-10)
+  otherIndexColor?: string;
+  otherIndexBackgroundColor?: string;
+  otherValueColor?: string;
+  otherValueBackgroundColor?: string;
+  otherBackgroundColor?: string;
   version: string;
   redis: boolean;
   [key: string]: any;
@@ -52,10 +80,35 @@ export interface Top10MetaData {
   thousandSeparator?: string;
   prefix?: string;
   suffix?: string;
+  buttonUri?: string;
   buttonText?: string;
   buttonIcon?: string;
   nameLabel?: string;
   valueLabel?: string;
+  // Color customization for champion (1st place)
+  championIndexColor?: string;
+  championIndexBackgroundColor?: string;
+  championValueColor?: string;
+  championValueBackgroundColor?: string;
+  championBackgroundColor?: string;
+  // Color customization for runner-up (2nd place)
+  runnerUpIndexColor?: string;
+  runnerUpIndexBackgroundColor?: string;
+  runnerUpValueColor?: string;
+  runnerUpValueBackgroundColor?: string;
+  runnerUpBackgroundColor?: string;
+  // Color customization for third place
+  thirdPlaceIndexColor?: string;
+  thirdPlaceIndexBackgroundColor?: string;
+  thirdPlaceValueColor?: string;
+  thirdPlaceValueBackgroundColor?: string;
+  thirdPlaceBackgroundColor?: string;
+  // Color customization for other places (4-10)
+  otherIndexColor?: string;
+  otherIndexBackgroundColor?: string;
+  otherValueColor?: string;
+  otherValueBackgroundColor?: string;
+  otherBackgroundColor?: string;
   version: string;
   redis: boolean;
   [key: string]: any;
